@@ -1,0 +1,191 @@
+/* Reset стилів */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Загальні стилі для body */
+body {
+    background-image: url(../materials/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Стилі для header */
+.header {
+    /* background-color: #333; */
+    padding: 20px;
+    padding-bottom: 0px;
+    text-align: right;
+}
+
+.header img {
+    width: 12vw;
+    border-radius: 100px;
+    transition: 0.8s;
+}
+
+.header img:hover{
+    transform: scale(120%);
+}
+
+/* Стилі для content */
+.content {
+    padding: 10px;
+    text-align: center;
+}
+
+.content .beer{
+    color: #fff;
+    letter-spacing: 7px;
+    font-size: 30px;
+    margin-left: 10px;
+    /* transition: color 0.3s ease; */
+    display: inline-block;
+    animation: rainbow 15s infinite;
+    /* animation: move 10s infinite; */
+}
+
+@keyframes rainbow {
+    0% { color: #ffffff; scale: 80%;}
+    25% { color: #ff8000; }
+    50% { color: #ffff8e; scale: 140%;}
+    75% { color: #7cffe5; }
+    100% { color: #ffffff; scale: 80%;}
+}
+
+/* Стилі для mainItems */
+.mainItems {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.mainItems img{
+    transition: 0.7s;
+}
+
+.mainItems img:hover{
+    transform: scale(150%);
+}
+
+.mainItems div {
+    width: 50px;
+    width: 7vw;
+}
+
+.mainItems div img{
+    width: 100%;
+    display: inline-block;
+    /* 150 для пк */
+}
+
+/* Стилі для menu */
+.menu {
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Встановлюємо напрямок від вертикалі до горизонталі */
+    align-items: center; /* Вирівнюємо по центру по горизонталі */
+}
+
+.menu .menuItem1, .menuItem2, .menuItem3, .menuItem4, .menuItem5, .menuItem6{
+    width: 80%;
+    /* під ноут 65% */
+    /* text-align: center; */
+    padding: 5px 0;
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: 100px;
+    transition: 0.5s;
+}
+
+.menu .menuItem1:hover, .menuItem2:hover, .menuItem3:hover, .menuItem4:hover, .menuItem5:hover, .menuItem6:hover {
+    background: linear-gradient(45deg, #75EEFF, #EDFF7E);
+    transform: scale(85%);
+}
+
+.menu div img {
+    width: 8%;
+    margin-left: 5px;
+    /* margin-top: 0px; */
+    border-radius: 100px;
+    text-align: left;
+    margin-right: 10%;
+}
+
+.menu div a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.menu p{
+    margin-top: 1%;
+    font-size: 3.5vw;
+}
+
+/* Стилі для footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+.footer div{
+    display: inline-block;
+    width: 45%;
+    margin-top: 5px;
+    margin: 10px;
+}
+
+.leftInfo a{
+    text-decoration: none;
+    color: #fffdc3;
+    transition: 1s;
+}
+
+.rightInfo a{
+    text-decoration: none;
+    color: rgb(207, 252, 134);
+    transition: 1s;
+}
+
+.rightInfo a:hover{
+    color: rgb(213, 113, 255);
+}
+
+.leftInfo a:hover{
+    color: rgb(173, 248, 255);
+}
+/* скролбар */
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgb(45, 45, 45);
+}
+
+::-webkit-scrollbar-track:hover{
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #edaaff;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #dc60ac;
+    background: #9d11b9;
+}
