@@ -17,7 +17,7 @@ body {
 /* Стилі для header */
 .header {
     /* background-color: #333; */
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 0px;
     text-align: right;
 }
@@ -35,6 +35,7 @@ body {
 /* Стилі для content */
 .content {
     padding: 10px;
+    padding-top: 0;
     text-align: center;
 }
 
@@ -57,7 +58,7 @@ body {
     100% { color: #ffffff; scale: 80%;}
 }
 
-/* Стилі для mainItems */
+/* Стилі для 4 головних іконок */
 .mainItems {
     display: flex;
     justify-content: space-around;
@@ -65,7 +66,7 @@ body {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .mainItems img{
@@ -84,7 +85,6 @@ body {
 .mainItems div img{
     width: 100%;
     display: inline-block;
-    /* 150 для пк */
 }
 
 /* Стилі для menu */
@@ -97,13 +97,14 @@ body {
 
 .menu .menuItem1, .menuItem2, .menuItem3, .menuItem4, .menuItem5, .menuItem6{
     width: 80%;
-    /* під ноут 65% */
-    /* text-align: center; */
     padding: 5px 0;
     background-color: #fff;
     margin-bottom: 50px;
     border-radius: 100px;
     transition: 0.5s;
+
+    display: flex;
+    align-items: center;
 }
 
 .menu .menuItem1:hover, .menuItem2:hover, .menuItem3:hover, .menuItem4:hover, .menuItem5:hover, .menuItem6:hover {
@@ -118,17 +119,27 @@ body {
     border-radius: 100px;
     text-align: left;
     margin-right: 17%;
+
+    margin-right: 0px;
 }
 
 .menu div a{
     text-decoration: none;
     color: black;
     display: flex;
+
+    display: flex; /* Використовуємо Flexbox */
+    align-items: center; /* Вирівнюємо елементи по вертикалі */
+    width: 100%; /* Займає весь доступний простір по ширині */
 }
 
 .menu p{
     margin-top: 1%;
     font-size: 3.5vw;
+
+    margin: 0; /* Видаляємо внутрішні відступи */
+    text-align: center; /* Вирівнюємо текст по центру */
+    flex-grow: 1; /* Розтягуємо текст на весь доступний вільний простір */
 }
 
 /* Стилі для footer */
@@ -188,4 +199,36 @@ body {
 ::-webkit-scrollbar-thumb:hover{
     background: #dc60ac;
     background: #9d11b9;
+}
+
+/* медіазапити */
+@media screen and (min-width: 1000px) {
+
+    .menu .menuItem1, .menuItem2, .menuItem3, .menuItem4, .menuItem5, .menuItem6{
+        width: 50%;
+    }
+    
+    .menu p{
+        font-size: 2.3vw;
+    }
+
+    .header img {
+        width: 6vw;
+    }
+
+    .mainItems div {
+        width: 4vw;
+    }
+
+    .mainItems {
+        width: 60%;
+    }
+
+    .mainItems img{
+        transition: 0.5s;
+    }
+
+    .mainItems img:hover{
+        transform: scale(130%);
+    }
 }
